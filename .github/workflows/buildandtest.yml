@@ -49,7 +49,7 @@ jobs:
     
     # Execute all unit tests in the solution
     - name: Execute UnitTest
-      run: dotnet test AltaPayApi/AltaPayApi.Tests/bin/Debug/AltaPayApi.Tests.dll
+      run: dotnet test AltaPayApi\AltaPayApi.Tests\bin\Debug\AltaPayApi.Tests.dll
       
 
 
