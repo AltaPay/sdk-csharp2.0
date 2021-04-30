@@ -49,6 +49,9 @@ jobs:
       run: msbuild /p:Configuration=Release $env:Solution_Name
     
     # Execute all unit tests in the solution
+    
+    - name: List Contents
+      run: dir D:\a\sdk-csharp2.0\sdk-csharp2.0\AltaPayApi/AltaPayApi.Tests/bin/Debug/
     - name: Execute UnitTest
       run: dotnet test $env:Test_Dll
       
