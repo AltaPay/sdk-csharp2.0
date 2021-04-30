@@ -41,8 +41,8 @@ jobs:
       uses: microsoft/setup-msbuild@2008f912f56e61277eefaac6d1888b750582aa16
       
      # Build solution
-    #- name: Build restore
-    #  run: dotnet restore $env:Solution_Name
+    - name: Build restore
+      run: dotnet restore $env:Solution_Name
       
     # Build solution
     - name: Build Script
