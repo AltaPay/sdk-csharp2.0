@@ -42,7 +42,7 @@ jobs:
     
     # Execute all unit tests in the solution
     - name: Execute unit tests
-      run: dotnet test $env:Test_Project_Path --logger trx
+      run: dotnet test $env:Test_Project_Path --verbosity minimal
       
 
 
