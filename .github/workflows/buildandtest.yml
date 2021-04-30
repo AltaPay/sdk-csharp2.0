@@ -1,0 +1,17 @@
+name: .NET Core Desktop
+
+on:
+  push:
+    branches: [ dotnet_workflow ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+
+  build:
+
+    strategy:
+      matrix:
+        configuration: [Debug, Release]
+
+    runs-on: windows-latest 
