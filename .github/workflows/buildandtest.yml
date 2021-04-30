@@ -19,6 +19,7 @@ jobs:
     env:
       Solution_Name: AltaPayApi/AltaPayApi.sln                         # Replace with your solution name, i.e. MyWpfApp.sln.
       Test_Project_Path: AltaPayApi/AltaPayApi.Tests/AltaPayApi.Tests.csproj
+      Test_Dll: AltaPayApi/AltaPayApi.Tests/bin/Debug/AltaPayApi.Tests.dll
       ACTIONS_ALLOW_UNSECURE_COMMANDS: true
 
     steps:
@@ -49,7 +50,7 @@ jobs:
     
     # Execute all unit tests in the solution
     - name: Execute UnitTest
-      run: dotnet test AltaPayApi\AltaPayApi.Tests\bin\Debug\AltaPayApi.Tests.dll
+      run: dotnet test $env:Test_Dll
       
 
 
