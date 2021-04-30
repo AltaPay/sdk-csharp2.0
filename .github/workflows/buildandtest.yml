@@ -27,7 +27,7 @@ jobs:
 
     - name: List contents
       run: |
-        ls -al
+        dir
 
     # Install the .NET Core workload
     - name: Install .NET Core
