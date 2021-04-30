@@ -41,7 +41,7 @@ jobs:
       
      # Build solution
     - name: Build restore
-      run: dotnet restore
+      run: dotnet restore $env:Solution_Name
       
     # Build solution
     - name: Build Script
