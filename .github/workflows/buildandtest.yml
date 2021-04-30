@@ -45,8 +45,8 @@ jobs:
     #  run: dotnet restore $env:Solution_Name
       
     # Build solution
-    #- name: Build Script
-    #  run: msbuild /p:Configuration=Release $env:Solution_Name
+    - name: Build Script
+      run: msbuild /p:Configuration=Release $env:Solution_Name
     
     # Execute all unit tests in the solution
     
