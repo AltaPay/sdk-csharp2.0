@@ -39,12 +39,10 @@ jobs:
     - name: Setup MSBuild.exe
       uses: microsoft/setup-msbuild@2008f912f56e61277eefaac6d1888b750582aa16
 
-    - name: Check build command
-      run: msbuild /p:Configuration=Release /m
     
     # Execute all unit tests in the solution
     - name: Execute unit tests
-      run: dotnet test "AltaPayApi/AltaPayApi.sln" --logger trx
+      run: dotnet test $env:Test_Project_Path --logger trx
       
 
 
