@@ -19,6 +19,7 @@ jobs:
     env:
       Solution_Name: AltaPayApi/AltaPayApi.sln                         # Replace with your solution name, i.e. MyWpfApp.sln.
       Test_Project_Path: AltaPayApi/AltaPayApi.Tests/AltaPayApi.Tests.csproj
+      ACTIONS_ALLOW_UNSECURE_COMMANDS: true
 
     steps:
     - name: Checkout
