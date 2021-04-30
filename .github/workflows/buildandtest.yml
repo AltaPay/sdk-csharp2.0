@@ -51,7 +51,7 @@ jobs:
     # Execute all unit tests in the solution
     
     - name: List Contents
-      run: dir D:\a\sdk-csharp2.0\sdk-csharp2.0\AltaPayApi\AltaPayApi.Tests\bin
+      run: dir D:\a\sdk-csharp2.0\sdk-csharp2.0\AltaPayApi\AltaPayApi.Tests\bin\Release
     - name: Execute UnitTest
       run: dotnet test $env:Test_Dll
       
