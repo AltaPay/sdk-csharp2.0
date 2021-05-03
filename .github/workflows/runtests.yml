@@ -46,7 +46,7 @@ jobs:
     
     # Execute Unit Tests
     - name: Execute UnitTest
-      run: dotnet test $env:Test_Dll
+      run: dotnet test $env:Test_Dll --filter "FullyQualifiedName~AltaPay.Service.Tests.Unit"
       
 
 
