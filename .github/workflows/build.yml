@@ -42,3 +42,7 @@ jobs:
     # Build package
     - name: Build
       run: ant
+      
+    # List package
+    - name: Build
+      run: ls -al dist/
