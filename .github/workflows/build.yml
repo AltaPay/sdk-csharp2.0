@@ -1,0 +1,34 @@
+name: Run .NET Tests
+
+on:
+  push:
+    branches: [ dotnet_workflow ]
+
+jobs:
+
+  build:
+
+    strategy:
+      matrix:
+        configuration: [Release]
+
+    runs-on: windows-latest
+
+    env:
+      Solution_Name: AltaPayApi/AltaPayApi.sln
+      Test_Project_Path: AltaPayApi/AltaPayApi.Tests/AltaPayApi.Tests.csproj
+      Test_Dll: AltaPayApi/AltaPayApi.Tests/bin/Release/AltaPayApi.Tests.dll
+      ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    # Install the .NET Core workload
+    - name: Install .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.x
+
+    - name: Build
+      run: ant
