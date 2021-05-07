@@ -45,4 +45,4 @@ jobs:
       
     # List package
     - name: Build
-      run: ls -al dist/
+      run: dir dist/
