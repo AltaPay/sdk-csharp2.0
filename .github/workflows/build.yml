@@ -2,7 +2,9 @@ name: Run .NET Tests
 
 on:
   push:
-    branches: [ dotnet_workflow ]
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
 
