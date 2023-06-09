@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.0.7]
+
+- Add missing values for orderline parameter goodsType
+
 ## [1.0.6]
 
 - Replace the deprecated 'transactions' endpoint with 'payments', for 'GetPayment' & 'GetPayments' methods
