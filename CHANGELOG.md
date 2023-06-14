@@ -3,7 +3,7 @@ All notable changes to this project will be documented in this file.
 
 ## [1.0.7]
 
-- Add missing values for orderline parameter goodsType
+- Add `digital`, `discount`, `gift_card`, `physical` and `sales_tax` as new goodsType for OrderLine class.
 
 ## [1.0.6]
 
