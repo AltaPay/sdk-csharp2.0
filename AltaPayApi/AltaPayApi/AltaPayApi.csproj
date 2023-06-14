@@ -8,7 +8,7 @@
 	  <Copyright>Copyright (c) 2021</Copyright>
 	  <RepositoryUrl>https://github.com/AltaPay/sdk-csharp2.0</RepositoryUrl>
 	  <RepositoryType>git</RepositoryType>
-	  <PackageReleaseNotes>Add missing values for orderline parameter goodsType</PackageReleaseNotes>
+	  <PackageReleaseNotes>Add digital, discount, gift_card, physical and sales_tax as new goodsType for OrderLine class</PackageReleaseNotes>
 	  <AssemblyVersion>1.0.0.7</AssemblyVersion>
 	  <FileVersion>1.0.0.7</FileVersion>
 	  <Authors>AltaPay</Authors>
