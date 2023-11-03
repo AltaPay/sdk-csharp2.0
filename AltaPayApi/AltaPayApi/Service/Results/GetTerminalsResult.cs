@@ -6,9 +6,9 @@ namespace AltaPay.Service
 {
 	public class GetTerminalsResult : ApiResult
 	{
-        public IEnumerable<Terminal> Terminals { get; }
+		public IEnumerable<Terminal> Terminals { get; }
 
-        public GetTerminalsResult(APIResponse apiResponse)
+		public GetTerminalsResult(APIResponse apiResponse)
 		{
 			if (apiResponse.Header.ErrorCode == 0)
 			{
@@ -17,9 +17,9 @@ namespace AltaPay.Service
 
 				if (!String.IsNullOrEmpty(apiResponse.Body.Result))
 					Result = (Result)Enum.Parse(typeof(Result), apiResponse.Body.Result);
-                Terminals = apiResponse.Body.Terminals;
-            }
-            else
+					Terminals = apiResponse.Body.Terminals;
+			}
+			else
 			{
 				Result = Result.SystemError;
 				ResultMerchantMessage = apiResponse.Header.ErrorMessage;

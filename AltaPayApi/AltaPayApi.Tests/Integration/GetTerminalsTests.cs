@@ -27,6 +27,6 @@ namespace AltaPay.Service.Tests.Integration
 			GetTerminalsResult result = _api.GetTerminals();
 
 			Assert.AreEqual(Result.Success, result.Result);
-        }
+		}
 	}
 }
