@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.0.8]
+
+- Add support for endpoint `getTerminals`.
 ## [1.0.7]
 
 - Add `digital`, `discount`, `gift_card`, `physical` and `sales_tax` as new values for goodsType.

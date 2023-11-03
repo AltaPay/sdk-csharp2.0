@@ -32,6 +32,6 @@ namespace AltaPay.Service
 		MultiPaymentApiResult ParseMultiPaymentPostBackXmlResponse(Stream responseStream);
 		CardWalletSessionResult CardWalletSession(CardWalletSessionRequest request);
 		CardWalletAuthorizeResult CardWalletAuthorize(CardWalletAuthorizeRequest request);
-        GetTerminalsResult GetTerminals();
+		GetTerminalsResult GetTerminals();
 	}
 }
