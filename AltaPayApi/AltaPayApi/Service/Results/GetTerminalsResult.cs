@@ -17,7 +17,7 @@ namespace AltaPay.Service
 
 				if (!String.IsNullOrEmpty(apiResponse.Body.Result))
 					Result = (Result)Enum.Parse(typeof(Result), apiResponse.Body.Result);
-					Terminals = apiResponse.Body.Terminals;
+				Terminals = apiResponse.Body.Terminals;
 			}
 			else
 			{
