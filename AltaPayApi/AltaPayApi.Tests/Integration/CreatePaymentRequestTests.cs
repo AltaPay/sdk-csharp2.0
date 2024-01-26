@@ -91,7 +91,7 @@ namespace AltaPay.Service.Tests.Integration
 					CallbackOpenUrl         = "http://demoshop.pensio.com/Open",
 					CallbackVerifyOrderUrl  = "http://demoshop.pensio.com/VerifyOrder",
 					CallbackMobileAppRedirectUrl = "http://demoshop.pensio.com/MobileAppRedirect"
-                },
+				},
 				
 				// Customer Data
 				CustomerInfo = {
