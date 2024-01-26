@@ -3,7 +3,7 @@ All notable changes to this project will be documented in this file.
 
 ## [1.0.9]
 
-- Add new callback parameter `callback_mobile_app_redirect` for `createPaymentRequest`.
+- Add option to set new callback parameter `callback_mobile_app_redirect` for `createPaymentRequest`.
 
 ## [1.0.8]
 
