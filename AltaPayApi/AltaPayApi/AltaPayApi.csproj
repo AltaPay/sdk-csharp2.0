@@ -13,7 +13,7 @@
 	  <FileVersion>1.0.0.9</FileVersion>
 	  <Authors>AltaPay</Authors>
 	  <Product>Altapay - API C_Sharp</Product>
-	  <PackageTags>1.0.9</PackageTags>
+	  <PackageTags>1.1.0</PackageTags>
 	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
