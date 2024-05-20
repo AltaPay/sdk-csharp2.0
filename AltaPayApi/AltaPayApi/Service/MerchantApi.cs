@@ -531,6 +531,17 @@ namespace AltaPay.Service
 			return new GetTerminalsResult(GetResponseFromApiCall("getTerminals", new Dictionary<string, Object>(), "GET"));
 		}
 
+		public CalculateSurchargeResult CalculateSurcharge (CalculateSurchargeRequest request)
+		{
+			var parameters = GetBasicCreatePaymentRequestParameters (request);
+
+			parameters.Add ("amount", request.Amount.GetAmountString ());
+			parameters.Add ("credit_card_token", request.CreditCardToken);
+			parameters.Add ("payment_id", request.PaymentId);
+
+			return new CalculateSurchargeResult (GetResponseFromApiCall ("calculateSurcharge", parameters, "GET"));
+		}
+
 		private string StreamToString(Stream stream)
 		{
 			var sr = new StreamReader(stream);
