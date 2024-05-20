@@ -26,8 +26,7 @@ namespace Examples
 		}
 
 		/// <summary>
-		/// Example for performing simple refund request. 
-		/// Payment has to be in captured state in order to refund be successful.
+		/// Example for Calculate Surcharge request.
 		/// </summary>
 		public void CalculateSurcharge ()
 		{
