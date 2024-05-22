@@ -17,7 +17,13 @@ namespace AltaPay.Service.Tests.Integration
 		[Test]
 		public void CallingMerchantApiReturnsSuccessfulResult ()
 		{
-			CalculateSurchargeResult result = _api.CalculateSurcharge();
+			CalculateSurchargeRequest calculateSurcharge = new CalculateSurchargeRequest ()
+			{
+				Amount = Amount.Get (120.20, Currency.EUR),
+				PaymentId = "52524771"
+			};
+
+			CalculateSurchargeResult result = _api.CalculateSurcharge(calculateSurcharge);
 
 			Assert.AreEqual (Result.Success, result.Result);
 		}
