@@ -8,12 +8,12 @@
 	  <Copyright>Copyright (c) 2021</Copyright>
 	  <RepositoryUrl>https://github.com/AltaPay/sdk-csharp2.0</RepositoryUrl>
 	  <RepositoryType>git</RepositoryType>
-	  <PackageReleaseNotes>Add option to set new callback param callback_mobile_app_redirect for createPaymentRequest</PackageReleaseNotes>
-	  <AssemblyVersion>1.0.0.9</AssemblyVersion>
-	  <FileVersion>1.0.0.9</FileVersion>
+	  <PackageReleaseNotes>Add support for calculateSurcharge endpoint</PackageReleaseNotes>
+	  <AssemblyVersion>1.0.0.10</AssemblyVersion>
+	  <FileVersion>1.0.0.10</FileVersion>
 	  <Authors>AltaPay</Authors>
 	  <Product>Altapay - API C_Sharp</Product>
-	  <PackageTags>1.0.9</PackageTags>
+	  <PackageTags>1.0.10</PackageTags>
 	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 

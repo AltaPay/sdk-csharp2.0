@@ -39,6 +39,11 @@ namespace Examples
             Console.WriteLine("Executing Get Terminals example");
             GetTerminalsExamples getTerminalsExamples = new GetTerminalsExamples();
             getTerminalsExamples.GetTerminals();
+            //calculateSurcharge examples
+            Console.WriteLine ("Executing Calculate Surcharge example");
+            CalculateSurchargeExamples calculateSurchargeExamples = new CalculateSurchargeExamples ();
+            calculateSurchargeExamples.CalculateSurcharge ();
+
             System.Console.ReadLine();
         }
     }
