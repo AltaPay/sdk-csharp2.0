@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.1.11]
+
+- Add new response property `AppUrl` for `createPaymentRequest`.
+
 ## [1.1.10]
 
 - Add support for endpoint `calculateSurcharge`.
