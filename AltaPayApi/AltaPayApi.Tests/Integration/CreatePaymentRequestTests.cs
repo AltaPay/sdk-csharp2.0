@@ -133,7 +133,7 @@ namespace AltaPay.Service.Tests.Integration
 				ShippingType = ShippingType.Military,
 				AccountOffer = AccountOffer.disabled,
 				Type = AuthType.payment,
-				
+				FormTemplate = "form_checkout",
 				
 				// Orderlines
 				OrderLines = {
