@@ -12,9 +12,6 @@ namespace AltaPay.Service
         {
             if (apiResponse.Header.ErrorCode == 0)
             {
-                ResultMessage = apiResponse.Body.CardHolderErrorMessage;
-                ResultMerchantMessage = apiResponse.Body.MerchantErrorMessage;
-
                 if (!String.IsNullOrEmpty(apiResponse.Body.Result))
                     Result = (Result)Enum.Parse(typeof(Result), apiResponse.Body.Result);
                 else
