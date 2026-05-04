@@ -555,6 +555,44 @@ namespace AltaPay.Service
 			return new CreditCardWalletInitiateAppPaymentResult(GetResponseFromApiCall(request.AppUrl, parameters, "GET", isMethodUrl: true));
 		}
 
+		public CheckoutSessionResult CheckoutSession(CheckoutSessionRequest request)
+		{
+			var parameters = new Dictionary<string, Object>();
+
+
+			if (!String.IsNullOrEmpty(request.Terminal))
+			{
+					parameters.Add("terminal", request.Terminal);
+			}
+			if (!String.IsNullOrEmpty(request.ShopOrderId))
+			{
+				parameters.Add("shop_orderid", request.ShopOrderId);
+			}
+
+			if (request.Amount != null)
+			{
+				parameters.Add("amount", request.Amount.GetAmountString());
+				parameters.Add("currency", request.Amount.Currency.GetNumericString());
+			}
+
+			if (request.Terminals != null && request.Terminals.Count > 0)
+			{
+				var terminalsParam = new Dictionary<string, object>();
+				for (int i = 0; i < request.Terminals.Count; i++)
+				{
+					terminalsParam.Add(i.ToString(), request.Terminals[i]);
+				}
+				parameters.Add("terminals", terminalsParam);
+			}
+
+			if (!String.IsNullOrEmpty(request.SessionId))
+			{
+				parameters.Add("session_id", request.SessionId);
+			}
+
+			return new CheckoutSessionResult(GetResponseFromApiCall("checkoutSession", parameters));
+		}
+
 		private string StreamToString(Stream stream)
 		{
 			var sr = new StreamReader(stream);
