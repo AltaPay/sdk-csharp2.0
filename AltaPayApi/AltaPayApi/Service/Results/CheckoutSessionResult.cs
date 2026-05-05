@@ -12,10 +12,7 @@ namespace AltaPay.Service
         {
             if (apiResponse.Header.ErrorCode == 0)
             {
-                if (!String.IsNullOrEmpty(apiResponse.Body.Result))
-                    Result = (Result)Enum.Parse(typeof(Result), apiResponse.Body.Result);
-                else
-                    Result = Result.Success; // Fallback for when Result node is missing
+                Result = Result.Success;
 
                 if (apiResponse.Body.Session != null)
                 {
@@ -25,7 +22,7 @@ namespace AltaPay.Service
             }
             else
             {
-                Result = Result.SystemError;
+                Result = Result.Error;
                 ResultMerchantMessage = apiResponse.Header.ErrorMessage;
                 ResultMessage = "An error occurred";
             }
