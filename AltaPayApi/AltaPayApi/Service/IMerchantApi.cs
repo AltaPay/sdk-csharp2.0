@@ -35,5 +35,5 @@ namespace AltaPay.Service
 		GetTerminalsResult GetTerminals();
 		CalculateSurchargeResult CalculateSurcharge (CalculateSurchargeRequest request);
 		CreditCardWalletInitiateAppPaymentResult CreditCardWalletInitiateAppPayment(CreditCardWalletInitiateAppPaymentRequest request);
-	}
+		CheckoutSessionResult CheckoutSession(CheckoutSessionRequest request);	}
 }
