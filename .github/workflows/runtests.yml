@@ -1,0 +1,52 @@
+name: Run .NET Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+
+  build:
+
+    strategy:
+      matrix:
+        configuration: [Release]
+
+    runs-on: windows-latest 
+    
+    env:
+      Solution_Name: AltaPayApi/AltaPayApi.sln
+      Test_Project_Path: AltaPayApi/AltaPayApi.Tests/AltaPayApi.Tests.csproj
+      Test_Dll: AltaPayApi/AltaPayApi.Tests/bin/Release/AltaPayApi.Tests.dll
+      ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    # Install the .NET Core workload
+    - name: Install .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.x
+        
+    # Add  MSBuild to the PATH: https://github.com/microsoft/setup-msbuild
+    - name: Setup MSBuild.exe
+      uses: microsoft/setup-msbuild@2008f912f56e61277eefaac6d1888b750582aa16
+      
+    # Build restore
+    - name: Build restore
+      run: dotnet restore $env:Solution_Name
+      
+    # Build solution
+    - name: Build Script
+      run: msbuild /p:Configuration=Release $env:Solution_Name
+    
+    # Execute Unit Tests
+    - name: Execute UnitTest
+      run: dotnet test $env:Test_Dll --filter "FullyQualifiedName~AltaPay.Service.Tests.Unit"
+      
+
+
