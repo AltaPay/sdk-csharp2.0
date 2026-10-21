@@ -22,6 +22,11 @@
     <ProjectReference Include="../AltaPayApi/AltaPayApi.csproj" />
   </ItemGroup>
 
+  <!-- Share the gateway URL/credentials/terminal constants with the integration tests -->
+  <ItemGroup>
+    <Compile Include="../AltaPayApi.Tests/Integration/GatewayConstants.cs" Link="GatewayConstants.cs" />
+  </ItemGroup>
+
   <!-- Exclude example files that depend on NUnit or other test-only files -->
   <ItemGroup>
     <Compile Remove="Service/Example_Klarna.cs" />
