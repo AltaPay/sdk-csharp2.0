@@ -8,10 +8,10 @@
 	  <Copyright>Copyright (c) 2021</Copyright>
 	  <RepositoryUrl>https://github.com/AltaPay/sdk-csharp2.0</RepositoryUrl>
 	  <RepositoryType>git</RepositoryType>
-	  <PackageReleaseNotes>Add support for checkoutSession endpoint</PackageReleaseNotes>
-	  <Version>1.2.0</Version>
-	  <AssemblyVersion>1.2.0.0</AssemblyVersion>
-	  <FileVersion>1.2.0.0</FileVersion>
+	  <PackageReleaseNotes>Supports API changes from gateway version 20261026</PackageReleaseNotes>
+	  <Version>1.2.1</Version>
+	  <AssemblyVersion>1.2.1.0</AssemblyVersion>
+	  <FileVersion>1.2.1.0</FileVersion>
 	  <Authors>AltaPay</Authors>
 	  <Product>Altapay - API C_Sharp</Product>
 	  <PackageTags>1.2.0</PackageTags>
