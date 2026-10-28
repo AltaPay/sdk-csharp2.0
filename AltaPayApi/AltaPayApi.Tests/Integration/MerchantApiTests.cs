@@ -65,6 +65,15 @@ namespace AltaPay.Service.Tests.Integration
 			Assert.IsFalse(string.IsNullOrEmpty(result.Payment.MerchantErrorCode));
 		}
 
+		[Test]
+		public void CallingMerchantApiWithSuccessfulParametersReturnsCardInformationType()
+		{
+			PaymentResult result = GetMerchantApiResult(Guid.NewGuid().ToString(), 1.23);
+
+			Assert.IsTrue(result.Payment.CardInformation.TypeSpecified);
+			Assert.AreEqual(AltaPay.Service.Dto.CardType.ConsumerCredit, result.Payment.CardInformation.Type);
+		}
+
 		[TestCase(true)]
 		[TestCase(false)]
 		public void CallingMerchantApiWithSuccessfulParametersReturnsAPaymentWithAPaymentId(Boolean callReservationOfFixedAmount)
