@@ -14,7 +14,7 @@
 	  <FileVersion>1.2.1.0</FileVersion>
 	  <Authors>AltaPay</Authors>
 	  <Product>Altapay - API C_Sharp</Product>
-	  <PackageTags>1.2.0</PackageTags>
+	  <PackageTags>1.2.1</PackageTags>
 	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
