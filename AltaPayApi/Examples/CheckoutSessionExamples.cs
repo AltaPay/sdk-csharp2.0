@@ -44,6 +44,7 @@ namespace Examples
                 
                 Console.WriteLine(" Session ID: " + result.SessionId);
                 Console.WriteLine(" Session Status: " + result.SessionStatus);
+                Console.WriteLine(" Supported Terminals: " + string.Join(", ", result.SupportedTerminals));
             }
             else
             {
